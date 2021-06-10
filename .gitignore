@@ -10,3 +10,9 @@ node-dependencies/.idea/modules.xml
 node-dependencies/.idea/vcs.xml
 node-dependencies/.idea/node-dependencies.iml
 node-dependencies/.idea/workspace.xml
+.idea/composerJson.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/node-essentials.iml
+.idea/vcs.xml
+.idea/workspace.xml
