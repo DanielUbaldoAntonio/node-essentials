@@ -32,10 +32,21 @@ async function findSalesFiles(folderName) {
 
 async function main() {
   const salesDir = path.join(__dirname, "stores");
+  const salesTotalsDir = path.join(__dirname, "salesTotals");
+
+  // create the salesTotal directory if it doesn't exist
+  try {
+    await fs.mkdir(salesTotalsDir);
+  } catch {
+    console.log(`${salesTotalsDir} already exists.`);
+  }
 
   // find paths to all the sales files
   const salesFiles = await findSalesFiles(salesDir);
-  console.log(salesFiles);
+
+  // write the total to the "totals.txt" file
+  await fs.writeFile(path.join(salesTotalsDir, "totals.txt"), String());
+  console.log(`Wrote sales totals to ${salesTotalsDir}`);
 }
 
 main();
